@@ -3,12 +3,12 @@ using UnityEngine.Rendering.Universal; // Libreria para el sistema de renderizad
 
 public class FlashlightController : MonoBehaviour
 {
-    private Light2D flashlight; // Variable para la linterna
+    public Light2D flashlight; // Variable para la linterna
     private bool isFlashlightOn = false; // Estado de la linterna
 
     void Start()
     {
-        flashlight = GetComponent<Light2D>(); // Obtener el componente Light2D
+        flashlight.enabled = false; // Asegurarse de que la linterna esté apagada al inicio
 
         if (flashlight == null)
         {
