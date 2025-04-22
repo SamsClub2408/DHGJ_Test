@@ -103,10 +103,10 @@ TextureImporter:
       name: LinternaMask_0
       rect:
         serializedVersion: 2
-        x: 480
-        y: 59
-        width: 961
-        height: 962
+        x: 600
+        y: 168
+        width: 742
+        height: 743
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 54381f185bd98d14b8516fe401e15136
     internalID: 0
     vertices: []
     indices: 

@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DHGJ_Arte_Colliders_01_0: 1871410230492207069
+      DHGJ_Arte_Colliders_01_1: -3406064273070032119
+      DHGJ_Arte_Colliders_01_2: -2518930777059639223
+      DHGJ_Arte_Colliders_01_3: 6165416026516938238
+      DHGJ_Arte_Colliders_01_4: -1065540883017373538
+      DHGJ_Arte_Colliders_01_5: 1067455387766963417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

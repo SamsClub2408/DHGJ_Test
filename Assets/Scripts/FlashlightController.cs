@@ -79,4 +79,14 @@ public class FlashlightController : MonoBehaviour
             energySlider.value = currentEnergy / maxEnergy; // Actualizar el valor del slider
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("LinternaArea"))
+        {
+            //Si entra el jugador en el area, la linterna se recarga poco a poco con maximo valor como 100
+            currentEnergy += 10f * Time.deltaTime; // Recargar energía
+            UpdateEnergy(); // Actualizar la energía
+        }
+    }
 }
