@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DHGJ_Arte_FondoFinalColor_01_0: 6507534609028225590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
