@@ -15,6 +15,8 @@ public class FlashlightController : MonoBehaviour
 
     public SpriteMask spriteMask; // Referencia al SpriteMask
 
+    public RecargaElectricidad recargaElectricidad; // Referencia al script de recarga de energía
+
     void Start()
     {
         if (flashlight == null)
@@ -29,8 +31,9 @@ public class FlashlightController : MonoBehaviour
     private void Update()
     {
         //Control de consumo de energia
-        if (isFlashlightOn)
+        if (isFlashlightOn && recargaElectricidad.isCharging == false)
         {
+            drainRate = 10f; // Reiniciar el drenaje de energía
             currentEnergy -= drainRate * Time.deltaTime; // Drenar energia
             currentEnergy = Mathf.Max(currentEnergy, 0f); // Limitar la energía a un mínimo de 0
             UpdateEnergy(); // Actualizar la energía
@@ -46,6 +49,17 @@ public class FlashlightController : MonoBehaviour
         else
         {
             spriteMask.enabled = false; // Desactivar el SpriteMask cuando la linterna está apagada
+        }
+
+        // Recarga de Energia
+        if (recargaElectricidad != null && recargaElectricidad.isCharging && !isFlashlightOn)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                currentEnergy += 5f; // Cantidad personalizable
+                currentEnergy = Mathf.Min(currentEnergy, maxEnergy);
+                UpdateEnergy();
+            }
         }
 
         // Comprobar si se presiona la tecla "SPACE"
@@ -77,16 +91,6 @@ public class FlashlightController : MonoBehaviour
         if (energySlider != null)
         {
             energySlider.value = currentEnergy / maxEnergy; // Actualizar el valor del slider
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("LinternaArea"))
-        {
-            //Si entra el jugador en el area, la linterna se recarga poco a poco con maximo valor como 100
-            currentEnergy += 10f * Time.deltaTime; // Recargar energía
-            UpdateEnergy(); // Actualizar la energía
         }
     }
 }
