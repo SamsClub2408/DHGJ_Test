@@ -13,6 +13,8 @@ public class FlashlightController : MonoBehaviour
     private float currentEnergy; // Energía actual de la linterna
     public Slider energySlider; // Referencia al slider de energía
 
+    public SpriteMask spriteMask; // Referencia al SpriteMask
+
     void Start()
     {
         if (flashlight == null)
@@ -33,10 +35,17 @@ public class FlashlightController : MonoBehaviour
             currentEnergy = Mathf.Max(currentEnergy, 0f); // Limitar la energía a un mínimo de 0
             UpdateEnergy(); // Actualizar la energía
 
-            if(currentEnergy <= 0)
+            spriteMask.enabled = true; // Activar el SpriteMask cuando la linterna está encendida
+
+            if (currentEnergy <= 0)
             {
                 ToggleFlashlight(); // Apagar la linterna si la energía se agota
+                spriteMask.enabled = false; // Desactivar el SpriteMask si la energía se agota
             }
+        }
+        else
+        {
+            spriteMask.enabled = false; // Desactivar el SpriteMask cuando la linterna está apagada
         }
 
         // Comprobar si se presiona la tecla "SPACE"
