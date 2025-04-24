@@ -27,6 +27,17 @@ public class Inventario : MonoBehaviour
                 ActualizarInventario();
             }
         }
+
+        if(inventarioActivo)
+        {
+            //Pausa el juego si el inventario está activo
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            //Reanuda el juego si el inventario está cerrado
+            Time.timeScale = 1f;
+        }
     }
 
     public void AñadirItem(string nombreItem)
