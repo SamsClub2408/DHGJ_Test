@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DHGJ_Arte_PedazoMural_01_0: -6644243210523326133
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

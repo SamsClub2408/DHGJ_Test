@@ -12,6 +12,40 @@ public class CamaraPOV : MonoBehaviour
     [Tooltip("Posición Y por debajo de la cual la luz se mantiene en su mínimo")]
     public float darknessLimitY;
 
+    public static int Nivel = 1;
+    public Transform PosicionNivel2;
+
+    //Manos Nivel 1
+    public SpriteRenderer manoIzquierda1;
+    public SpriteRenderer manoDerecha1;
+
+    //Manos Nivel 2
+    public SpriteRenderer manoIzquierda2;
+    public SpriteRenderer manoDerecha2;
+
+    //Colliders Nivel 1
+    public EdgeCollider2D colliderNv1;
+
+    private void Start()
+    {
+        if(Nivel == 1)
+        {
+            manoDerecha1.enabled = true; // Activa la mano derecha del nivel 1
+            manoIzquierda1.enabled = true; // Activa la mano izquierda del nivel 1
+            colliderNv1.enabled = true; // Activa el collider del nivel 1
+        }
+
+        if (Nivel == 2)
+        {
+            transform.position = PosicionNivel2.position; // Cambia la posición de la cámara al inicio del nivel 2
+            manoDerecha1.enabled = false; // Desactiva la mano derecha del nivel 1
+            manoIzquierda1.enabled = false; // Desactiva la mano izquierda del nivel 1
+            manoDerecha2.enabled = true; // Activa la mano derecha del nivel 2
+            manoIzquierda2.enabled = true; // Activa la mano izquierda del nivel 2
+            colliderNv1.enabled = false; // Desactiva el collider del nivel 1
+        }
+    }
+
     void Update()
     {
         float moveX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;

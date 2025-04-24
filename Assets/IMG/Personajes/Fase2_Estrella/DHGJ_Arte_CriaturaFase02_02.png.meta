@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DHGJ_Arte_CriaturaFase02_02_0: 1209738228006513266
+      DHGJ_Arte_CriaturaFase02_02_1: -5891332937551887516
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

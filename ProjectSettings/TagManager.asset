@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LinternaArea
   - AreaOxigeno
+  - AudioAleta
   layers:
   - Default
   - TransparentFX
