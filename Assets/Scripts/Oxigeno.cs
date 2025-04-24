@@ -9,8 +9,8 @@ public class Oxigeno : MonoBehaviour
     // Configuración de oxígeno
     public float oxigenoMaximo = 100f;
     private float oxigenoActual;
-    public float consumoBase = 1f; // Consumo por segundo
-    public float multiplicadorConsumo = 2f; // Aumento por umbral
+    public static float consumoBase = 1f; // Consumo por segundo
+    public static float multiplicadorConsumo = 2f; // Aumento por umbral
 
     // Umbrales en Y (de mayor a menor profundidad)
     public float umbral1 = 5f; // Umbral más alto
@@ -29,17 +29,17 @@ public class Oxigeno : MonoBehaviour
         // Calcular consumo según umbrales
         float consumoTotal = consumoBase;
 
-        if (transform.position.y < umbral1)
+        if (transform.position.y < umbral1 && !OxygenController.areaOxigeno)
         {
             Debug.Log("Umbral 1 alcanzado: " + transform.position.y);
             consumoTotal += multiplicadorConsumo;
         }
-        if (transform.position.y < umbral2)
+        if (transform.position.y < umbral2 && !OxygenController.areaOxigeno)
         {
             Debug.Log("Umbral 2 alcanzado: " + transform.position.y);
             consumoTotal += multiplicadorConsumo;
         }
-        if (transform.position.y < umbral3)
+        if (transform.position.y < umbral3 && !OxygenController.areaOxigeno)
         {
             Debug.Log("Umbral 3 alcanzado: " + transform.position.y);
             consumoTotal += multiplicadorConsumo;
