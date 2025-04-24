@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 using UnityEngine.Rendering.Universal; // Libreria para el sistema de renderizado Universal Render Pipeline (Luces xD)
 using UnityEngine.UI; // Libreria para la UI (Interfaz de Usuario)
 
@@ -16,6 +18,9 @@ public class FlashlightController : MonoBehaviour
     public SpriteMask spriteMask; // Referencia al SpriteMask
 
     public RecargaElectricidad recargaElectricidad; // Referencia al script de recarga de energía
+
+    //Referencia a AudioManager
+    public AudioManager audioManager; // Referencia al AudioManager
 
     void Start()
     {
@@ -40,15 +45,29 @@ public class FlashlightController : MonoBehaviour
 
             spriteMask.enabled = true; // Activar el SpriteMask cuando la linterna está encendida
 
+            //Sonido de la linterna
+            audioManager.Linterna(); // Reproducir el sonido de la linterna
+
             if (currentEnergy <= 0)
             {
                 ToggleFlashlight(); // Apagar la linterna si la energía se agota
                 spriteMask.enabled = false; // Desactivar el SpriteMask si la energía se agota
+                audioManager.LinternaClick(); // Reproducir el sonido de la linterna
+
+                //llamar a la corrutina Energia Acabada
+                StartCoroutine(EnergiaAcabada());
             }
         }
         else
         {
             spriteMask.enabled = false; // Desactivar el SpriteMask cuando la linterna está apagada
+            //audioManager.Pausar(); // Pausar el sonido de la linterna
+        }
+
+        //Sonido de linterna si esta en zona de recarga
+        if(isFlashlightOn && recargaElectricidad.isCharging)
+        {
+            audioManager.Linterna(); // Reproducir el sonido de la linterna
         }
 
         // Recarga de Energia
@@ -63,9 +82,13 @@ public class FlashlightController : MonoBehaviour
         }
 
         // Comprobar si se presiona la tecla "SPACE"
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !Inventario.Pausa)
         {
             ToggleFlashlight();
+        }
+        else if (Input.GetKeyUp(KeyCode.Space) && Inventario.Pausa)
+        {
+            //No hace nada
         }
     }
 
@@ -82,7 +105,16 @@ public class FlashlightController : MonoBehaviour
             isFlashlightOn = !isFlashlightOn; // Cambiar el estado de la linterna
             flashlight.enabled = isFlashlightOn; // Activar o desactivar la linterna
 
+            audioManager.LinternaClick(); // Reproducir el sonido de la linterna
             UpdateEnergy(); // Actualizar la energía
+
+            if(!isFlashlightOn && currentEnergy>=0)
+            {
+                audioManager.LinternaClick(); // Reproducir el sonido de la linterna
+
+                StartCoroutine(EnergiaAcabada()); // Llamar a la corrutina EnergiaAcabada
+            }
+
         }
     }
 
@@ -92,5 +124,11 @@ public class FlashlightController : MonoBehaviour
         {
             energySlider.value = currentEnergy / maxEnergy; // Actualizar el valor del slider
         }
+    }
+
+    private IEnumerator EnergiaAcabada()
+    {
+        yield return new WaitForSeconds(0.5f); // Esperar a
+        audioManager.Pausar(); // Pausar el sonido de la linterna
     }
 }

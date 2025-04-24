@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DHGJ_Arte_FondoBarco_01_0: 590692024578263753
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

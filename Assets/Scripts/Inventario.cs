@@ -10,6 +10,8 @@ public class Inventario : MonoBehaviour
 
     private bool inventarioActivo = false;
 
+    public static bool Pausa = false; // Variable para pausar el juego
+
     private void Awake()
     {
         instance = this; // Singleton para acceder desde `Item`
@@ -32,11 +34,13 @@ public class Inventario : MonoBehaviour
         {
             //Pausa el juego si el inventario está activo
             Time.timeScale = 0f;
+            Pausa = true; // Cambia el estado de pausa
         }
         else
         {
             //Reanuda el juego si el inventario está cerrado
             Time.timeScale = 1f;
+            Pausa = false; // Cambia el estado de pausa
         }
     }
 
