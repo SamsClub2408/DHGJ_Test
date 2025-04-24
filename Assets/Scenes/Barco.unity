@@ -223,7 +223,7 @@ MonoBehaviour:
   escenaTecla1: Menu
   tecla1: 109
   instruccionesAnimator: {fileID: 1450877619}
-  escenaTecla2: Creditos
+  escenaTecla2: Layout
   tecla2: 115
   FotoAnimator: {fileID: 1142670507}
 --- !u!4 &469794452
