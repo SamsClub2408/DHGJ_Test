@@ -54,7 +54,7 @@ public class FlashlightController : MonoBehaviour
         // Recarga de Energia
         if (recargaElectricidad != null && recargaElectricidad.isCharging && !isFlashlightOn)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 currentEnergy += 5f; // Cantidad personalizable
                 currentEnergy = Mathf.Min(currentEnergy, maxEnergy);

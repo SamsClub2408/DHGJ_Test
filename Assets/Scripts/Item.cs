@@ -2,28 +2,30 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public string nombreItem; // Nombre del ítem
     private bool jugadorHaTocado = false; // Variable para detectar la colisión
 
     private void OnTriggerEnter2D(Collider2D otro)
     {
-        if (otro.CompareTag("Player")) // Verifica que el objeto que colisionó es el jugador
+        if (otro.CompareTag("Player"))
         {
             Debug.Log("El jugador ha tocado el objeto, presiona X para recogerlo.");
-            jugadorHaTocado = true; // Marca que el jugador ha tocado el ítem
+            jugadorHaTocado = true;
         }
     }
 
     private void Update()
     {
-        if (jugadorHaTocado && Input.GetKeyDown(KeyCode.X))
+        if (jugadorHaTocado && Input.GetKeyDown(KeyCode.Tab))
         {
-            Desaparecer();
+            AgregarAInventario();
         }
     }
 
-    void Desaparecer()
+    void AgregarAInventario()
     {
-        Debug.Log("Objeto recogido y eliminado.");
-        Destroy(gameObject);
+        Inventario.instance.AñadirItem(nombreItem); // Guarda el ítem en el inventario
+        Debug.Log("Objeto recogido y guardado en el inventario.");
+        Destroy(gameObject); // Elimina el ítem de la escena
     }
 }
