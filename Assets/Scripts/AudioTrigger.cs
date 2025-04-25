@@ -12,6 +12,7 @@ public class AudioTrigger : MonoBehaviour
 
     public AudioClip objetoRecogidoClip, objetoRecogidoClip1; // Asigna el clip de audio en el inspector
     public Animator lampreaAnimator; // Asigna el animator de la lamprea en el inspector
+    public GameObject aleta;
 
     public static bool Atacado = false;
 
@@ -20,6 +21,7 @@ public class AudioTrigger : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         activationArea1.enabled = false; // Desactiva el collider al inicio
         audioSource.pitch = 1f; // Asegura el pitch estándar
+        aleta.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -43,6 +45,7 @@ public class AudioTrigger : MonoBehaviour
         {
             audioSource1.PlayOneShot(objetoRecogidoClip1); // Reproduce el clip de audio una vez
             Item.objetoRecogido02 = false; // Reinicia la variable al terminar el audio
+            aleta.SetActive(true);
         }
     }
 

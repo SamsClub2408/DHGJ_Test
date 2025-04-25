@@ -5,7 +5,7 @@ public class NPCTrigger : MonoBehaviour
 {
     public GameObject dialogoImagen; // Imagen del diálogo
     public Animator personajeAnimator; // Animator del NPC
-    public float tiempoEspera = 8f; // Tiempo de espera antes de alejarse
+    public float tiempoEspera = 5f; // Tiempo de espera antes de alejarse
 
 
     void Start()
