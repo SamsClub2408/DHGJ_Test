@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public AudioClip L_click, L_Sound, C_Attack;
+    public AudioSource audioSource,audioSource1;
+    public AudioClip L_click, L_Sound, C_Attack, BgLvl1, BgLvl2;
 
     private void Update()
     {
@@ -12,6 +12,26 @@ public class AudioManager : MonoBehaviour
         {
             AtaqueLamprea();
             Debug.Log("Atacado");
+        }
+
+        if(CamaraPOV.Nivel == 1)
+        {
+            //Musica
+            if (!audioSource1.isPlaying)
+            {
+                audioSource1.clip = BgLvl1;
+                audioSource1.Play();
+            }
+        }
+
+        if (CamaraPOV.Nivel == 2)
+        {
+            //Musica
+            if (!audioSource1.isPlaying)
+            {
+                audioSource1.clip = BgLvl2;
+                audioSource1.Play();
+            }
         }
     }
 
