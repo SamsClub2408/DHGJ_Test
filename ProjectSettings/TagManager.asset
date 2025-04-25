@@ -9,6 +9,7 @@ TagManager:
   - AudioAleta
   - L1
   - L2
+  - Muerte
   layers:
   - Default
   - TransparentFX

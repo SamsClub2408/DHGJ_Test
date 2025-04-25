@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Ancla : MonoBehaviour
@@ -37,6 +38,9 @@ public class Ancla : MonoBehaviour
     {
         if (jugadorHaTocado && Input.GetKeyDown(KeyCode.Tab))
         {
+            if(ActivaMuerte.muerte)
+                SceneManager.LoadScene("Barco");
+            else
             ActivarBarco();
         }
         else if (Input.GetKeyDown(KeyCode.S))
