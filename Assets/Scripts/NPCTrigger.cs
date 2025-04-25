@@ -12,6 +12,12 @@ public class NPCTrigger : MonoBehaviour
     {
         personajeAnimator.Play("LesbianaIdle"); // Inicia con la animación Idle
         dialogoImagen.SetActive(false); // Asegura que el diálogo está oculto al inicio
+        if (GestorEstado.instancia.regresoDeBarco)
+        {
+            gameObject.SetActive(false); // Desactiva el NPC
+            Debug.Log(gameObject.name + " desactivado al regresar de Barco.");
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D other)

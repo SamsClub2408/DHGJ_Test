@@ -22,6 +22,11 @@ public class AudioTrigger : MonoBehaviour
         activationArea1.enabled = false; // Desactiva el collider al inicio
         audioSource.pitch = 1f; // Asegura el pitch estándar
         aleta.SetActive(false);
+        if (GestorEstado.instancia.ObtenerEstadoAleta())
+        {
+            aleta.SetActive(true);
+        }
+
     }
 
     private void FixedUpdate()
@@ -41,11 +46,13 @@ public class AudioTrigger : MonoBehaviour
         }
 
         //Vasija
-        if(Item.objetoRecogido02 && !audioSource1.isPlaying)
+        if (Item.objetoRecogido02 && !audioSource1.isPlaying)
         {
-            audioSource1.PlayOneShot(objetoRecogidoClip1); // Reproduce el clip de audio una vez
-            Item.objetoRecogido02 = false; // Reinicia la variable al terminar el audio
+            audioSource1.PlayOneShot(objetoRecogidoClip1);
+            Item.objetoRecogido02 = false;
+
             aleta.SetActive(true);
+            GestorEstado.instancia.ActivarAleta(); // Guarda el estado de la aleta
         }
     }
 

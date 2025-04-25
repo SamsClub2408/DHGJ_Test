@@ -17,6 +17,7 @@ public class Inventario : MonoBehaviour
         instance = this; // Singleton para acceder desde `Item`
     }
 
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)) // Alterna el inventario con "E"
@@ -56,7 +57,7 @@ public class Inventario : MonoBehaviour
             imagen.SetActive(false); // Desactiva todas las imágenes primero
         }
 
-        foreach (string item in itemsRecogidos)
+        foreach (string item in GestorEstado.instancia.inventario)
         {
             foreach (GameObject imagen in imagenesInventario)
             {
