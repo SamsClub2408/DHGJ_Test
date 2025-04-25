@@ -31,6 +31,8 @@ public class NPCGemelo : MonoBehaviour
         yield return new WaitForSeconds(tiempoEsperaDialogo); // Espera 3 segundos
         dialogoImagen1.SetActive(false);
         gemeloAnimator.SetInteger("Estado", 1); // Cambia a GemeloCad
+        Debug.Log("Estado cambiado a 1, debería activar GemeloCad");
+
 
         yield return new WaitForSeconds(tiempoDuracionGemeloCad); // Espera exactamente la duración de GemeloCad
         gemeloAnimator.SetInteger("Estado", 2); // Cambia a GemeloCadIdle
@@ -45,8 +47,8 @@ public class NPCGemelo : MonoBehaviour
     {
         if (other.CompareTag("MainCamera"))
         {
-            dialogoImagen1.SetActive(false);
-            dialogoImagen2.SetActive(false);
+            if (dialogoImagen1 != null) dialogoImagen1.SetActive(false);
+            if (dialogoImagen2 != null) dialogoImagen2.SetActive(false);
         }
     }
 }

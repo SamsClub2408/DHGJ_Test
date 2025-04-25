@@ -15,6 +15,7 @@ public class CamaraPOV : MonoBehaviour
     public static int Nivel = 1;
     public Transform PosicionNivel2;
 
+
     //Manos Nivel 1
     public SpriteRenderer manoIzquierda1;
     public SpriteRenderer manoDerecha1;
@@ -26,6 +27,9 @@ public class CamaraPOV : MonoBehaviour
     //Colliders Nivel 1
     public EdgeCollider2D colliderNv1;
 
+    public string etiquetaNivel1 = "L1"; 
+    public string etiquetaNivel2 = "L2";
+
     private void Start()
     {
         if(Nivel == 1)
@@ -33,6 +37,7 @@ public class CamaraPOV : MonoBehaviour
             manoDerecha1.enabled = true; // Activa la mano derecha del nivel 1
             manoIzquierda1.enabled = true; // Activa la mano izquierda del nivel 1
             colliderNv1.enabled = true; // Activa el collider del nivel 1
+            DesactivarObjetosPorEtiqueta(etiquetaNivel2);
         }
 
         if (Nivel == 2)
@@ -43,6 +48,7 @@ public class CamaraPOV : MonoBehaviour
             manoDerecha2.enabled = true; // Activa la mano derecha del nivel 2
             manoIzquierda2.enabled = true; // Activa la mano izquierda del nivel 2
             colliderNv1.enabled = false; // Desactiva el collider del nivel 1
+            DesactivarObjetosPorEtiqueta(etiquetaNivel1);
         }
     }
 
@@ -76,6 +82,17 @@ public class CamaraPOV : MonoBehaviour
             float t = Mathf.InverseLerp(darknessLimitY, maxY, currentY);
             darkness.intensity = Mathf.Lerp(minIntensity, maxIntensity, t);
         }
+    }
+
+    void DesactivarObjetosPorEtiqueta(string etiqueta)
+    {
+        GameObject[] objetos = GameObject.FindGameObjectsWithTag(etiqueta);
+        foreach (GameObject obj in objetos)
+        {
+            obj.SetActive(false);
+        }
+
+        Debug.Log("Todos los objetos con etiqueta '" + etiqueta + "' han sido desactivados.");
     }
 
     // Opcional: Validación para el editor de Unity
