@@ -7,12 +7,17 @@ public class AudioTrigger : MonoBehaviour
 {
     private AudioSource audioSource;
     public AudioSource audioSource1;
+    public AudioSource audioSource2;
+    public AudioSource audioSource3;
+    public AudioSource audioSource4;
     public CircleCollider2D activationArea1; // Asigna el collider en el inspector
     private bool jugadorHaTocado = false; // Variable para detectar que ha recogido el objeto
 
-    public AudioClip objetoRecogidoClip, objetoRecogidoClip1; // Asigna el clip de audio en el inspector
+    public AudioClip objetoRecogidoClip, objetoRecogidoClip1, objetoRecogidoClip2,
+        objetoRecogidoClip3; // Asigna el clip de audio en el inspector
     public Animator lampreaAnimator; // Asigna el animator de la lamprea en el inspector
     public GameObject aleta;
+    public GameObject Cadaver02;
 
     public static bool Atacado = false;
 
@@ -22,6 +27,7 @@ public class AudioTrigger : MonoBehaviour
         activationArea1.enabled = false; // Desactiva el collider al inicio
         audioSource.pitch = 1f; // Asegura el pitch estándar
         aleta.SetActive(false);
+        Cadaver02.SetActive(false); // Desactiva el objeto al inicio
     }
 
     private void FixedUpdate()
@@ -46,6 +52,28 @@ public class AudioTrigger : MonoBehaviour
             audioSource1.PlayOneShot(objetoRecogidoClip1); // Reproduce el clip de audio una vez
             Item.objetoRecogido02 = false; // Reinicia la variable al terminar el audio
             aleta.SetActive(true);
+        }
+
+        //Vasija 2
+        if(Item.objetoRecogido03 && !audioSource2.isPlaying)
+        {
+            audioSource2.PlayOneShot(objetoRecogidoClip2);
+            Item.objetoRecogido03 = false;
+            Debug.Log("DERRUMBEEE");
+        }
+
+        //Caliz
+        if (Item.objetoRecogido04 && !audioSource3.isPlaying)
+        {
+            audioSource3.PlayOneShot(objetoRecogidoClip3);
+            Item.objetoRecogido04 = false;
+            Cadaver02.SetActive(true); // Activa el objeto  
+        }
+
+        //Inicio de nivel 2
+        if(CamaraPOV.Nivel == 2)
+        {
+            audioSource4.enabled = true; // Activa el audio
         }
     }
 

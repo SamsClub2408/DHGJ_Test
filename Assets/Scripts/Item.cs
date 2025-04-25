@@ -9,6 +9,8 @@ public class Item : MonoBehaviour
 
     public static bool objetoRecogido01 = false; // Variable para indicar si el objeto clave ha sido recogido
     public static bool objetoRecogido02 = false;
+    public static bool objetoRecogido03 = false;
+    public static bool objetoRecogido04 = false;
 
     private Animator lesbianaAnimator; // Asigna el animator de la lesbiana en el inspector
 
@@ -48,6 +50,16 @@ public class Item : MonoBehaviour
                 Debug.Log("Item Trigger");
                 lesbianaAnimator.SetTrigger("Vasija1Activado"); // Activa el trigger del animator
                 objetoRecogido02 = true; // Cambia el estado de recogido
+            }
+            if(nombreItem == "Vasija2")
+            {
+                Debug.Log("Item Tigger");
+                objetoRecogido03 = true;
+            }
+            if(nombreItem == "Caliz")
+            {
+                Debug.Log("Item Trigger");
+                objetoRecogido04 = true; // Cambia el estado de recogido
             }
         }
     }

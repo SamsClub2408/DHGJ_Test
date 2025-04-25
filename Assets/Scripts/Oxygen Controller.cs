@@ -20,7 +20,20 @@ public class OxygenController : MonoBehaviour
     {
         if (collision.CompareTag("AreaOxigeno"))
         {
-            Oxigeno.consumoBase = 1f;
+            if (Oxigeno.umbralAlcanzado <= 1)
+            {
+                Oxigeno.consumoBase = 1f;
+            }
+            if (Oxigeno.umbralAlcanzado == 2)
+            {
+                Oxigeno.multiplicadorConsumo = -3f;
+            }
+            if (Oxigeno.umbralAlcanzado == 3)
+            {
+                Oxigeno.consumoBase = -5f;
+            }
+
+
             areaOxigeno = false; // Desactivar el área de oxígeno
             textoRecarga.enabled = false; // Ocultar el texto de recarga
         }
