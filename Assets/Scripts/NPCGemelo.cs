@@ -15,12 +15,6 @@ public class NPCGemelo : MonoBehaviour
         gemeloAnimator.SetInteger("Estado", 0); // Inicia en GemeloIdle
         dialogoImagen1.SetActive(false);
         dialogoImagen2.SetActive(false);
-        if (GestorEstado.instancia.regresoDeBarco && GestorEstado.instancia.nivelActual == 2)
-        {
-            gameObject.SetActive(false); // Desactiva el NPC solo si el jugador vino del Nivel 2
-            Debug.Log(gameObject.name + " desactivado porque el jugador vino del Nivel 2.");
-        }
-
     }
 
     void OnTriggerEnter2D(Collider2D other)

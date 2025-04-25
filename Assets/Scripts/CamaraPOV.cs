@@ -13,7 +13,6 @@ public class CamaraPOV : MonoBehaviour
     public float darknessLimitY;
 
     public static int Nivel = 1;
-    public static bool Muerte = false;
     public Transform PosicionNivel2;
 
 

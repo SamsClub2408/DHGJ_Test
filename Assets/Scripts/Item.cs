@@ -8,15 +8,6 @@ public class Item : MonoBehaviour
 
     public static bool objetoRecogido01 = false; // Variable para indicar si el objeto clave ha sido recogido
     public static bool objetoRecogido02 = false;
-
-    void Start()
-    {
-        if (GestorEstado.instancia.ObjetoFueRecogido(nombreItem))
-        {
-            Debug.Log("Este objeto ya fue recogido, eliminándolo de la escena.");
-            Destroy(gameObject); // Si el objeto fue recogido antes, lo eliminamos.
-        }
-    }
     private void OnTriggerEnter2D(Collider2D otro)
     {
         if (otro.CompareTag("Player"))
@@ -46,7 +37,7 @@ public class Item : MonoBehaviour
 
     void AgregarAInventario()
     {
-        GestorEstado.instancia.AñadirItem(nombreItem); // Guarda el ítem en GestorEstado
+        Inventario.instance.AñadirItem(nombreItem); // Guarda el ítem en el inventario
         Debug.Log("Objeto recogido y guardado en el inventario.");
         Destroy(gameObject); // Elimina el ítem de la escena
     }

@@ -18,11 +18,6 @@ public class CambioDeEscena : MonoBehaviour
     {
         StartCoroutine(EsperarFinAnimacion1()); // Espera a que termine la animación inicial
         StartCoroutine(EsperarFinAnimacion2()); // Espera a que termine la animación inicial
-        if(CamaraPOV.Nivel==1|| CamaraPOV.Nivel == 2)
-        {
-            puedePresionar1=true;
-            puedePresionar2=true;
-        }
     }
     void Update()
     {
