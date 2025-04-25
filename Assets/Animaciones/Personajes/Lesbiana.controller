@@ -59,9 +59,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: TiempoEspera
-    m_EventTreshold: 8
+  - m_ConditionMode: 1
+    m_ConditionEvent: Vasija1Activado
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3854041259462486454}
   m_Solo: 0
@@ -112,8 +112,8 @@ AnimatorController:
   m_Name: Lesbiana
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: TiempoEspera
-    m_Type: 1
+  - m_Name: Vasija1Activado
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
