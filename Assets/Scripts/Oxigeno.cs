@@ -31,17 +31,17 @@ public class Oxigeno : MonoBehaviour
 
         if (transform.position.y < umbral1 && !OxygenController.areaOxigeno)
         {
-            Debug.Log("Umbral 1 alcanzado: " + transform.position.y);
+            //Debug.Log("Umbral 1 alcanzado: " + transform.position.y);
             consumoTotal += multiplicadorConsumo;
         }
         if (transform.position.y < umbral2 && !OxygenController.areaOxigeno)
         {
-            Debug.Log("Umbral 2 alcanzado: " + transform.position.y);
+            //Debug.Log("Umbral 2 alcanzado: " + transform.position.y);
             consumoTotal += multiplicadorConsumo;
         }
         if (transform.position.y < umbral3 && !OxygenController.areaOxigeno)
         {
-            Debug.Log("Umbral 3 alcanzado: " + transform.position.y);
+            //Debug.Log("Umbral 3 alcanzado: " + transform.position.y);
             consumoTotal += multiplicadorConsumo;
         }
 
