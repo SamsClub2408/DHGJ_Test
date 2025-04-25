@@ -37,7 +37,7 @@ public class NPCGemelo : MonoBehaviour
 
         yield return new WaitForSeconds(tiempoDuracionGemeloCad); // Espera exactamente la duración de GemeloCad
         gemeloAnimator.SetInteger("Estado", 2); // Cambia a GemeloCadIdle
-        dialogoImagen1.SetActive(false)
+        dialogoImagen1.SetActive(false);
         dialogoImagen2.SetActive(true);
 
 

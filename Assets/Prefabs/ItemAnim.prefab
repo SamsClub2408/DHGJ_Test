@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2574382218769426650, guid: 05253ffda7646214b98a260539dea360, type: 3}
       propertyPath: m_TagString
-      value: L1
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7286245788725073457, guid: 05253ffda7646214b98a260539dea360, type: 3}
       propertyPath: m_Sprite
