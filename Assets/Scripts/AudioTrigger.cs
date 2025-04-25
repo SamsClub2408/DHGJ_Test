@@ -17,7 +17,6 @@ public class AudioTrigger : MonoBehaviour
         objetoRecogidoClip3; // Asigna el clip de audio en el inspector
     public Animator lampreaAnimator; // Asigna el animator de la lamprea en el inspector
     public GameObject aleta;
-    public GameObject Cadaver02;
 
     public static bool Atacado = false;
 
@@ -27,7 +26,6 @@ public class AudioTrigger : MonoBehaviour
         activationArea1.enabled = false; // Desactiva el collider al inicio
         audioSource.pitch = 1f; // Asegura el pitch estándar
         aleta.SetActive(false);
-        Cadaver02.SetActive(false); // Desactiva el objeto al inicio
     }
 
     private void FixedUpdate()
@@ -67,7 +65,6 @@ public class AudioTrigger : MonoBehaviour
         {
             audioSource3.PlayOneShot(objetoRecogidoClip3);
             Item.objetoRecogido04 = false;
-            Cadaver02.SetActive(true); // Activa el objeto  
         }
 
         //Inicio de nivel 2

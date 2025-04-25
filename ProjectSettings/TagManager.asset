@@ -10,6 +10,7 @@ TagManager:
   - L1
   - L2
   - Muerte
+  - Ancla
   layers:
   - Default
   - TransparentFX
