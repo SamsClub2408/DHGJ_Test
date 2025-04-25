@@ -7,6 +7,7 @@ public class Item : MonoBehaviour
     private bool jugadorHaTocado = false; // Variable para detectar la colisión
 
     public static bool objetoRecogido01 = false; // Variable para indicar si el objeto clave ha sido recogido
+    public static bool objetoRecogido02 = false;
     private void OnTriggerEnter2D(Collider2D otro)
     {
         if (otro.CompareTag("Player"))
@@ -25,6 +26,11 @@ public class Item : MonoBehaviour
             {
                 Debug.Log("Item Trigger");
                 objetoRecogido01 = true; // Cambia el estado de recogido
+            }
+            if(nombreItem == "Vasija1")
+            {
+                Debug.Log("Item Trigger");
+                objetoRecogido02 = true; // Cambia el estado de recogido
             }
         }
     }

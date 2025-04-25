@@ -6,22 +6,25 @@ using System.Collections;
 public class AudioTrigger : MonoBehaviour
 {
     private AudioSource audioSource;
-    private CircleCollider2D activationArea1; // Asigna el collider en el inspector
+    public AudioSource audioSource1;
+    public CircleCollider2D activationArea1; // Asigna el collider en el inspector
     private bool jugadorHaTocado = false; // Variable para detectar que ha recogido el objeto
 
-    public AudioClip objetoRecogidoClip; // Asigna el clip de audio en el inspector
+    public AudioClip objetoRecogidoClip, objetoRecogidoClip1; // Asigna el clip de audio en el inspector
     public Animator lampreaAnimator; // Asigna el animator de la lamprea en el inspector
+
+    public static bool Atacado = false;
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        activationArea1 = GetComponent<CircleCollider2D>();
         activationArea1.enabled = false; // Desactiva el collider al inicio
         audioSource.pitch = 1f; // Asegura el pitch estándar
     }
 
     private void FixedUpdate()
     {
+        //Aleta
         if(Item.objetoRecogido01 && !audioSource.isPlaying)
         {
             audioSource.PlayOneShot(objetoRecogidoClip); // Reproduce el clip de audio una vez
@@ -29,9 +32,17 @@ public class AudioTrigger : MonoBehaviour
             jugadorHaTocado = true; // Marca que el jugador ha recogido el objeto
         }
 
-        if(jugadorHaTocado && CamaraPOV.Nivel == 1)
+        // Si el jugador ha recogido el objeto y está en el nivel 1, activa el collider
+        if (jugadorHaTocado && CamaraPOV.Nivel == 1)
         {
             activationArea1.enabled = true; // Activa el collider
+        }
+
+        //Vasija
+        if(Item.objetoRecogido02 && !audioSource1.isPlaying)
+        {
+            audioSource1.PlayOneShot(objetoRecogidoClip1); // Reproduce el clip de audio una vez
+            Item.objetoRecogido02 = false; // Reinicia la variable al terminar el audio
         }
     }
 
@@ -41,6 +52,7 @@ public class AudioTrigger : MonoBehaviour
         {
             //Activar trigger del animator
             lampreaAnimator.SetTrigger("LampreaInvocacion");
+            Atacado = true;
             StartCoroutine(CambiarEscena()); // Llama a la corrutina para cambiar de escena
         }
     }
@@ -52,5 +64,6 @@ public class AudioTrigger : MonoBehaviour
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Layout"); // Cambia a la escena deseada
         CamaraPOV.Nivel = 2; // Cambia el nivel de la cámara
+        Atacado = false; // Reinicia la variable de ataque
     }
 }

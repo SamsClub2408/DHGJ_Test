@@ -4,7 +4,16 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource audioSource;
-    public AudioClip L_click, L_Sound;
+    public AudioClip L_click, L_Sound, C_Attack;
+
+    private void Update()
+    {
+        if(AudioTrigger.Atacado)
+        {
+            AtaqueLamprea();
+            Debug.Log("Atacado");
+        }
+    }
 
     public void Pausar()
     {
@@ -27,6 +36,14 @@ public class AudioManager : MonoBehaviour
             audioSource.clip = L_Sound;
             audioSource.loop = true;
             audioSource.Play();
+        }
+    }
+
+    public void AtaqueLamprea()
+    {
+        if(!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(C_Attack);
         }
     }
 }
