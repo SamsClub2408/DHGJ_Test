@@ -103,6 +103,7 @@ public class CamaraPOV : MonoBehaviour
 
     void DesactivarObjetosPorEtiqueta(string etiqueta)
     {
+        //Encontrar objetos con el nombre del inspector
         GameObject[] objetos = GameObject.FindGameObjectsWithTag(etiqueta);
         foreach (GameObject obj in objetos)
         {

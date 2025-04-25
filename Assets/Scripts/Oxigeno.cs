@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; // Libreria para cargar escenas
 
 public class Oxigeno : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class Oxigeno : MonoBehaviour
 
     // Configuración de oxígeno
     public float oxigenoMaximo = 100f;
-    private float oxigenoActual;
+    public static float oxigenoActual;
     public static float consumoBase = 1f; // Consumo por segundo
     public static float multiplicadorConsumo = 2f; // Aumento por umbral
 
@@ -16,6 +17,8 @@ public class Oxigeno : MonoBehaviour
     public float umbral1 = 5f; // Umbral más alto
     public float umbral2 = 3f;
     public float umbral3 = 1f; // Umbral más bajo
+
+    public static int umbralAlcanzado = 0; // Contador de umbrales alcanzados
 
     void Start()
     {
@@ -31,23 +34,33 @@ public class Oxigeno : MonoBehaviour
 
         if (transform.position.y < umbral1 && !OxygenController.areaOxigeno)
         {
-            //Debug.Log("Umbral 1 alcanzado: " + transform.position.y);
+            //Debug.Log("Umbral 1 alcanzado: " + consumoTotal);
             consumoTotal += multiplicadorConsumo;
+            umbralAlcanzado = 1; // Aumentar el contador de umbrales alcanzados
         }
         if (transform.position.y < umbral2 && !OxygenController.areaOxigeno)
         {
-            //Debug.Log("Umbral 2 alcanzado: " + transform.position.y);
+            //Debug.Log("Umbral 2 alcanzado: " + consumoTotal);
             consumoTotal += multiplicadorConsumo;
+            umbralAlcanzado = 2; // Aumentar el contador de umbrales alcanzados
         }
         if (transform.position.y < umbral3 && !OxygenController.areaOxigeno)
         {
-            //Debug.Log("Umbral 3 alcanzado: " + transform.position.y);
+            //Debug.Log("Umbral 3 alcanzado: " + consumoTotal);
             consumoTotal += multiplicadorConsumo;
+            umbralAlcanzado = 3; // Aumentar el contador de umbrales alcanzados
         }
 
         // Reducir oxígeno
         oxigenoActual -= consumoTotal * Time.deltaTime;
         oxigenoActual = Mathf.Clamp(oxigenoActual, 0f, oxigenoMaximo);
+
+        //Muerte
+        if(oxigenoActual <= 0)
+        {
+            //Debug.Log("Te has ahogado");
+            SceneManager.LoadScene("Muerte");
+        }
 
         // Actualizar slider
         oxigenoSlider.value = oxigenoActual;

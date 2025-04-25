@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource audioSource,audioSource1;
-    public AudioClip L_click, L_Sound, C_Attack, BgLvl1, BgLvl2;
+    public AudioSource audioSource,audioSource1,audioSource2, audioSource3,audioSource4;
+    public AudioClip L_click, L_Sound, C_Attack, BgLvl1, BgLvl2, OpenInv, CloseInv;
+    public AudioClip OxygenRecharge, LowOxygen;
+
+    private bool inventarioAbierto = true;
 
     private void Update()
     {
@@ -14,7 +17,69 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Atacado");
         }
 
-        if(CamaraPOV.Nivel == 1)
+        if(Inventario.inventarioActivo && inventarioAbierto)
+        {
+            AbrirInventario();
+            inventarioAbierto = false;
+        }
+        if (!Inventario.inventarioActivo && !inventarioAbierto)
+        {
+            CerrarInventario();
+            inventarioAbierto = true;
+        }
+
+        //Umbral 1
+        if(Oxigeno.oxigenoActual < 8f && Oxigeno.umbralAlcanzado <=1)
+        {
+            OxigenoBajo();
+            if (Inventario.Pausa)
+            {
+                audioSource4.Pause(); // Pausa el clip de audio
+            }
+            else if (!Inventario.Pausa)
+            {
+                audioSource4.UnPause(); // Reanuda el clip de audio
+            }
+        }
+
+        //Umbral 2
+        if (Oxigeno.oxigenoActual < 24f && Oxigeno.umbralAlcanzado == 2)
+        {
+            OxigenoBajo();
+            if (Inventario.Pausa)
+            {
+                audioSource4.Pause(); // Pausa el clip de audio
+            }
+            else if (!Inventario.Pausa)
+            {
+                audioSource4.UnPause(); // Reanuda el clip de audio
+            }
+        }
+
+        //Umbral 3
+        if (Oxigeno.oxigenoActual < 40f && Oxigeno.umbralAlcanzado == 3)
+        {
+            OxigenoBajo();
+            if (Inventario.Pausa)
+            {
+                audioSource4.Pause(); // Pausa el clip de audio
+            }
+            else if (!Inventario.Pausa)
+            {
+                audioSource4.UnPause(); // Reanuda el clip de audio
+            }
+        }
+
+        if (OxygenController.areaOxigeno)
+        {
+            RecargarOxigeno();
+        }
+        else
+        {
+            audioSource3.Stop();
+        }
+
+        if (CamaraPOV.Nivel == 1)
         {
             //Musica
             if (!audioSource1.isPlaying)
@@ -64,6 +129,35 @@ public class AudioManager : MonoBehaviour
         if(!audioSource.isPlaying)
         {
             audioSource.PlayOneShot(C_Attack);
+        }
+    }
+
+    public void AbrirInventario()
+    {
+        audioSource2.PlayOneShot(OpenInv); // Reproduce el clip de audio una vez 
+    }
+
+    public void CerrarInventario()
+    {
+        audioSource2.PlayOneShot(CloseInv); // Reproduce el clip de audio una vez 
+    }
+
+    public void RecargarOxigeno()
+    {
+        if (!audioSource3.isPlaying)
+        {
+            audioSource3.clip = OxygenRecharge;
+            audioSource3.loop = false;
+            audioSource3.Play(); // Reproduce el clip de audio una vez
+        }
+    }
+
+    public void OxigenoBajo()
+    {
+        if (!audioSource4.isPlaying)
+        {
+            audioSource4.clip = LowOxygen;
+            audioSource4.Play();
         }
     }
 }

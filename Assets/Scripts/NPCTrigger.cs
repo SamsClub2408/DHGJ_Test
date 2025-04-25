@@ -20,7 +20,6 @@ public class NPCTrigger : MonoBehaviour
         if (other.CompareTag("MainCamera")) // Si la cámara entra en el trigger del NPC
         {
             dialogoImagen.SetActive(true); // Activa el diálogo
-            StartCoroutine(IniciarSalidaNPC());
         }
     }
 

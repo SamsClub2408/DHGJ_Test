@@ -8,7 +8,7 @@ public class Inventario : MonoBehaviour
     public List<string> itemsRecogidos = new List<string>(); // Lista de ítems recogidos
     public List<GameObject> imagenesInventario; // Lista de imágenes asociadas a los ítems
 
-    private bool inventarioActivo = false;
+    public static bool inventarioActivo = false;
 
     public static bool Pausa = false; // Variable para pausar el juego
 
