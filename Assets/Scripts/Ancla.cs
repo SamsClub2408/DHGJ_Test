@@ -3,26 +3,33 @@ using UnityEngine.UI;
 
 public class Ancla : MonoBehaviour
 {
-    public GameObject imagenBarco; // Imagen que se activará
-    public Slider oxigenoSlider; // Referencia al slider de oxígeno
-    private bool jugadorHaTocado = false; // Detectar si el jugador tocó el ancla
-    public Text textoRecarga; // Texto que muestra la recarga
+    public GameObject barco; // Objeto que se activará
+    public Text textoRecarga; // Texto de recarga
+    private bool jugadorHaTocado = false; // Detecta si el jugador está en el ancla
     public GameObject jugador; // Referencia al jugador
-
-    public MonoBehaviour scriptMovimiento; // Referencia al script de movimiento del jugador
+    private CamaraPOV camaraPOV; // Referencia al script CamaraPOV
 
     private void Start()
     {
-        imagenBarco.SetActive(false); // Ocultar la imagen al inicio
-        scriptMovimiento = jugador.GetComponent<MonoBehaviour>(); // Obtener el script de movimiento
+        barco.SetActive(false); // Ocultar barco al inicio
+        textoRecarga.enabled = false; // Ocultar texto de recarga
+        camaraPOV = jugador.GetComponent<CamaraPOV>(); // Obtener script CamaraPOV
     }
 
     private void OnTriggerEnter2D(Collider2D otro)
     {
         if (otro.CompareTag("Player"))
         {
-            Debug.Log("El jugador ha tocado el ancla, presiona Tab para recargar oxígeno.");
+            Debug.Log("El jugador ha tocado el ancla. Presiona 'Tab' para activarlo.");
             jugadorHaTocado = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D otro)
+    {
+        if (otro.CompareTag("Player"))
+        {
+            jugadorHaTocado = false; // Resetea la condición cuando el jugador sale del área
         }
     }
 
@@ -30,41 +37,36 @@ public class Ancla : MonoBehaviour
     {
         if (jugadorHaTocado && Input.GetKeyDown(KeyCode.Tab))
         {
-            ActivarRecargaOxigeno();
+            ActivarBarco();
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            DesactivarRecargaOxigeno();
+            DesactivarBarco();
         }
     }
 
-    void ActivarRecargaOxigeno()
+    void ActivarBarco()
     {
-        imagenBarco.SetActive(true); // Mostrar la imagen de recarga
+        barco.SetActive(true); // Activar barco
         Oxigeno.consumoBase = -2f; // Detener consumo de oxígeno
         Oxigeno.multiplicadorConsumo = 0f;
         OxygenController.areaOxigeno = true;
-        textoRecarga.enabled = true; // Mostrar el texto de recarga
+        textoRecarga.enabled = true; // Mostrar texto de recarga
 
-        // Restaurar oxígeno al máximo
-        oxigenoSlider.value = oxigenoSlider.maxValue;
-
-        // **Desactivar el script de movimiento para impedir que el jugador se mueva**
-        scriptMovimiento.enabled = false;
-
-        Debug.Log("Oxígeno recargado y movimiento bloqueado hasta que presiones 'S'.");
+        // **Desactivar el script CamaraPOV solo si estamos en el ancla**
+            camaraPOV.enabled = false;
+            Debug.Log("¡Barco activado! La cámara está desactivada.");
     }
 
-    void DesactivarRecargaOxigeno()
+    void DesactivarBarco()
     {
-        imagenBarco.SetActive(false); // Ocultar la imagen de recarga
+        barco.SetActive(false); // Ocultar barco
         Oxigeno.consumoBase = 1f; // Restaurar consumo de oxígeno normal
         OxygenController.areaOxigeno = false;
-        textoRecarga.enabled = false; // Ocultar el texto de recarga
+        textoRecarga.enabled = false; // Ocultar texto de recarga
 
-        // **Reactivar el script de movimiento para que el jugador pueda moverse nuevamente**
-        scriptMovimiento.enabled = true;
-
-        Debug.Log("Oxígeno vuelve a consumirse y movimiento restaurado.");
+        // **Reactivar el script CamaraPOV solo si el jugador estaba en el ancla**
+            camaraPOV.enabled = true;
+            Debug.Log("El barco se ha desactivado y la cámara vuelve a funcionar.");
     }
 }
