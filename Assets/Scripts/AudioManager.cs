@@ -18,11 +18,11 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Atacado");
         }
 
-        if(BossBehavior.BossKilledYou)
-        {
-            audioSource.pitch = 0.45f; // Asegura el pitch estándar
-            AtaqueLamprea();
-        }
+        //if(BossBehavior.BossKilledYou)
+        //{
+           // audioSource.pitch = 0.45f; // Asegura el pitch estándar
+            //AtaqueLamprea();
+        //}
 
         if(Inventario.inventarioActivo && inventarioAbierto)
         {

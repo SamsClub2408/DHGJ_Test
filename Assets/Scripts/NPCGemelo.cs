@@ -1,57 +1,73 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using System.Collections;
 
 public class NPCGemelo : MonoBehaviour
 {
-    public GameObject dialogoImagen1; // Imagen del primer diálogo
-    public GameObject dialogoImagen2; // Imagen del segundo diálogo
-    public Animator gemeloAnimator; // Animator del NPC
-    public float tiempoEsperaDialogo = 3f; // Tiempo antes de ocultar el primer diálogo
-    public float tiempoDuracionGemeloCad = 4f; // Duración de la animación GemeloCad
-    public float tiempoGemeloCadIdle = 5f; // Tiempo antes de activar GemeloBarco
+    public Animator gemeloAnimator;
+    public GameObject dialogoImagen1, dialogoImagen2, objetoCaliz, objetoCad1;
+
+    private int estadoActual = 0;
 
     void Start()
     {
-        gemeloAnimator.SetInteger("Estado", 0); // Inicia en GemeloIdle
         dialogoImagen1.SetActive(false);
         dialogoImagen2.SetActive(false);
-    }
+        objetoCaliz.SetActive(false);
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("MainCamera"))
+        gemeloAnimator.SetInteger("Estado", 0);
+
+        if (CamaraPOV.Nivel == 2)
         {
-            dialogoImagen1.SetActive(true);
-            StartCoroutine(FlujoAnimaciones());
+            StartCoroutine(FlujoAnimaciones()); // âœ… Solo inicia la animaciÃ³n si estamos en el nivel 2
         }
     }
 
     IEnumerator FlujoAnimaciones()
     {
-        yield return new WaitForSeconds(tiempoEsperaDialogo); // Espera 3 segundos
-        dialogoImagen1.SetActive(false);
-        gemeloAnimator.SetInteger("Estado", 1);
-        gemeloAnimator.Update(0);
-        Debug.Log("Estado cambiado a 1 y forzado en el Animator.");
+        yield return new WaitForSeconds(4f);
+        CambiarEstado(1);
 
+        yield return new WaitForSeconds(4f);
+        CambiarEstado(2);
 
-        yield return new WaitForSeconds(tiempoDuracionGemeloCad); // Espera exactamente la duración de GemeloCad
-        gemeloAnimator.SetInteger("Estado", 2); // Cambia a GemeloCadIdle
-        dialogoImagen1.SetActive(false);
-        dialogoImagen2.SetActive(true);
+        yield return new WaitForSeconds(4f);
+        CambiarEstado(3);
+        objetoCad1.SetActive(false );
+        yield return new WaitForSeconds(5.5f);
+        objetoCaliz.SetActive(true);
+    }
 
+    void CambiarEstado(int nuevoEstado)
+    {
+        if (CamaraPOV.Nivel != 2) return; // âœ… Si el nivel no es 2, no cambiar el estado
 
-        yield return new WaitForSeconds(tiempoGemeloCadIdle);
-        dialogoImagen2.SetActive(false);
-        gemeloAnimator.SetInteger("Estado", 3); // Cambia a GemeloBarco
+        estadoActual = nuevoEstado;
+        gemeloAnimator.SetInteger("Estado", nuevoEstado);
+        Debug.Log("Cambiando a estado: " + nuevoEstado);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (estadoActual == 0)
+            {
+                dialogoImagen1.SetActive(true);
+            }
+            else if (estadoActual == 2)
+            {
+                dialogoImagen1.SetActive(false);
+                dialogoImagen2.SetActive(true);
+            }
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("MainCamera"))
+        if (other.CompareTag("Player"))
         {
-            if (dialogoImagen1 != null) dialogoImagen1.SetActive(false);
-            if (dialogoImagen2 != null) dialogoImagen2.SetActive(false);
+            dialogoImagen1.SetActive(false);
+            dialogoImagen2.SetActive(false);
         }
     }
 }

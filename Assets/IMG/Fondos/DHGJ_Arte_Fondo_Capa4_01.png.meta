@@ -1,0 +1,418 @@
+fileFormatVersion: 2
+guid: 92cbeb0a7835c964ca6f4d6bf6fe4f23
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2978785420782790849
+    second: DHGJ_Arte_Fondo_Capa4_01_0
+  - first:
+      213: 5599772535378019927
+    second: DHGJ_Arte_Fondo_Capa4_01_1
+  - first:
+      213: 9011291512455743587
+    second: DHGJ_Arte_Fondo_Capa4_01_2
+  - first:
+      213: -6742762792682030572
+    second: DHGJ_Arte_Fondo_Capa4_01_3
+  - first:
+      213: 3196817534040007349
+    second: DHGJ_Arte_Fondo_Capa4_01_4
+  - first:
+      213: -6960802027135581165
+    second: DHGJ_Arte_Fondo_Capa4_01_5
+  - first:
+      213: -4186943436606037675
+    second: DHGJ_Arte_Fondo_Capa4_01_6
+  - first:
+      213: 5832521663378758553
+    second: DHGJ_Arte_Fondo_Capa4_01_7
+  - first:
+      213: -8188417511061374003
+    second: DHGJ_Arte_Fondo_Capa4_01_8
+  - first:
+      213: 6943392407445261950
+    second: DHGJ_Arte_Fondo_Capa4_01_9
+  - first:
+      213: -5391334540403582577
+    second: DHGJ_Arte_Fondo_Capa4_01_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DHGJ_Arte_Fondo_Capa4_01_0
+      rect:
+        serializedVersion: 2
+        x: 7214
+        y: 14710
+        width: 1385
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f37112c217a39a6d0800000000000000
+      internalID: -2978785420782790849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DHGJ_Arte_Fondo_Capa4_01_1
+      rect:
+        serializedVersion: 2
+        x: 7302
+        y: 14691
+        width: 126
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 756023ab37366bd40800000000000000
+      internalID: 5599772535378019927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DHGJ_Arte_Fondo_Capa4_01_2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 13088
+        width: 1527
+        height: 1175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368ca6ff2e98e0d70800000000000000
+      internalID: 9011291512455743587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DHGJ_Arte_Fondo_Capa4_01_3
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 10365
+        width: 865
+        height: 1155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a7779f6f4ec62a0800000000000000
+      internalID: -6742762792682030572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DHGJ_Arte_Fondo_Capa4_01_4
+      rect:
+        serializedVersion: 2
+        x: 7180
+        y: 11438
+        width: 2020
+        height: 1428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2e1381c906d5c20800000000000000
+      internalID: 3196817534040007349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DHGJ_Arte_Fondo_Capa4_01_5
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 8772
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 314c3ccaf63466f90800000000000000
+      internalID: -6960802027135581165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DHGJ_Arte_Fondo_Capa4_01_6
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 6436
+        width: 1771
+        height: 2903
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 551a176b02df4e5c0800000000000000
+      internalID: -4186943436606037675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DHGJ_Arte_Fondo_Capa4_01_7
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 7308
+        width: 2864
+        height: 3150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b16720d8741f050800000000000000
+      internalID: 5832521663378758553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DHGJ_Arte_Fondo_Capa4_01_8
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 8686
+        width: 24
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb399468a5ec5e80800000000000000
+      internalID: -8188417511061374003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DHGJ_Arte_Fondo_Capa4_01_9
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 6674
+        width: 583
+        height: 2087
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e4bed5b92eb5060800000000000000
+      internalID: 6943392407445261950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DHGJ_Arte_Fondo_Capa4_01_10
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 7119
+        width: 368
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8953fdccc12e25b0800000000000000
+      internalID: -5391334540403582577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

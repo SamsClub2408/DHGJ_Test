@@ -468,8 +468,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -59}
-  m_SizeDelta: {x: 1161.8721, y: 509.1248}
+  m_AnchoredPosition: {x: -0.00002861, y: -54}
+  m_SizeDelta: {x: 1211.4248, y: 509.1248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &623034958
 MonoBehaviour:
@@ -504,8 +504,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.3
-  m_Text: "Eres parte de una tripulaci\xF3n de buzos arqueologos, tienen la mision
-    de explorar unas ruinas"
+  m_Text: Eres parte de una tripulacion de buzos arqueologos, tienen la mision de
+    explorar unas ruinas
 --- !u!222 &623034959
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 639760d7c527cf147b1a8810b90ad7f1, type: 3}
+  m_Texture: {fileID: 2800000, guid: f68fbf73b6db3a94d9f13bf26aed2476, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -620,8 +620,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -101}
-  m_SizeDelta: {x: 1500, y: 800}
+  m_AnchoredPosition: {x: 0, y: -0.0000038146973}
+  m_SizeDelta: {x: 1500, y: 554.844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784018945
 MonoBehaviour:
@@ -657,7 +657,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1.3
   m_Text: "Utiliza WASD o flechas para moverte\nTab para interacciones \nSpace para
-    la linterna\nM para volver al men\xFA\nPresiona E para abrir tu inventario...\n\n"
+    la linterna\nZ para volver al oceano\nM para volver al menu\nPresiona E para
+    abrir tu inventario...\n\n"
 --- !u!222 &784018946
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -682,7 +683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &789027610
 RectTransform:
   m_ObjectHideFlags: 0
@@ -978,8 +979,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 362, y: -681}
-  m_SizeDelta: {x: 1094.8082, y: 201.0758}
+  m_AnchoredPosition: {x: 322, y: -678}
+  m_SizeDelta: {x: 807.9235, y: 201.0758}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024643556
 MonoBehaviour:
@@ -1003,7 +1004,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 214262c842ad329459f1aca27fc5b8e7, type: 3}
-    m_FontSize: 60
+    m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1248,7 +1249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: eab96fe48aec09c4fa87cf0db383f677, type: 3}
+  m_Texture: {fileID: 2800000, guid: 9b58b590ce62d254fa0f14af4f32e98c, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1378,7 +1379,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 70e9e718019d6194e95fd0d308ef890b, type: 3}
+  m_Texture: {fileID: 2800000, guid: f4292287abc8abe498136a10c19bc838, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
