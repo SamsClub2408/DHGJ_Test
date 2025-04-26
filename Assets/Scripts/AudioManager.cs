@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,8 +14,14 @@ public class AudioManager : MonoBehaviour
     {
         if(AudioTrigger.Atacado)
         {
-            AtaqueLamprea();
+            StartCoroutine(GritoLamprea());
             Debug.Log("Atacado");
+        }
+
+        if(BossBehavior.BossKilledYou)
+        {
+            audioSource.pitch = 0.45f; // Asegura el pitch estándar
+            AtaqueLamprea();
         }
 
         if(Inventario.inventarioActivo && inventarioAbierto)
@@ -98,6 +105,22 @@ public class AudioManager : MonoBehaviour
                 audioSource1.Play();
             }
         }
+
+        if (CamaraPOV.Nivel == 3 && !MusicaSacra.MuralActivo)
+        {
+            //Musica
+            if (!audioSource1.isPlaying)
+            {
+                audioSource.volume = 1f; // Asegura que el volumen esté al máximo
+                audioSource1.clip = BgLvl2;
+                audioSource1.Play();
+            }
+        }
+        else if (CamaraPOV.Nivel == 3 && MusicaSacra.MuralActivo)
+        {
+            //Bajar el volumen a la mitad
+            audioSource1.volume = 0.5f;
+        }
     }
 
     public void Pausar()
@@ -159,5 +182,11 @@ public class AudioManager : MonoBehaviour
             audioSource4.clip = LowOxygen;
             audioSource4.Play();
         }
+    }
+
+    IEnumerator GritoLamprea()
+    {
+        yield return new WaitForSeconds(1f); // Espera 0.5 segundos antes de reproducir el sonido
+        AtaqueLamprea();
     }
 }

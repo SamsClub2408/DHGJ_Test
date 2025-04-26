@@ -38,10 +38,15 @@ public class Ancla : MonoBehaviour
     {
         if (jugadorHaTocado && Input.GetKeyDown(KeyCode.Tab))
         {
-            if(ActivaMuerte.muerte)
+            if (CamaraPOV.Nivel == 2 && Item.AnclaActivator)
+            {
                 SceneManager.LoadScene("Barco");
+                ActivaMuerte.muerte = true; // Activar la muerte
+            }
             else
-            ActivarBarco();
+            {
+                ActivarBarco();
+            }
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {

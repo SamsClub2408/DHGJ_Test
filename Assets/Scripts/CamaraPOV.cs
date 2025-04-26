@@ -31,6 +31,7 @@ public class CamaraPOV : MonoBehaviour
 
     //Colliders Nivel 1
     public EdgeCollider2D colliderNv1;
+    public CircleCollider2D Mural1;
 
     public string etiquetaNivel1 = "L1"; 
     public string etiquetaNivel2 = "L2";

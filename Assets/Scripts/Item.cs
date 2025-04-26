@@ -10,7 +10,9 @@ public class Item : MonoBehaviour
     public static bool objetoRecogido01 = false; // Variable para indicar si el objeto clave ha sido recogido
     public static bool objetoRecogido02 = false;
     public static bool objetoRecogido03 = false;
-    public static bool objetoRecogido04 = false;
+    public static bool objetoRecogido04 = false, AnclaActivator = false;
+    public static bool objetoRecogido05 = false;
+    public static bool objetoRecogido06 = false;
 
     private Animator lesbianaAnimator; // Asigna el animator de la lesbiana en el inspector
 
@@ -60,6 +62,17 @@ public class Item : MonoBehaviour
             {
                 Debug.Log("Item Trigger");
                 objetoRecogido04 = true; // Cambia el estado de recogido
+                AnclaActivator = true; // Cambia el estado de recogido
+            }
+            if(nombreItem == "Mural")
+            {
+                Debug.Log("Item Trigger");
+                objetoRecogido05 = true; // Cambia el estado de recogido
+            }
+            if(nombreItem == "Estatua")
+            {
+                Debug.Log("Item Trigger");
+                objetoRecogido06 = true; // Cambia el estado de recogido
             }
         }
     }

@@ -8,7 +8,7 @@ public class FlashlightController : MonoBehaviour
 {
     //Variables para la linterna
     public Light2D flashlight; // Variable para la linterna
-    private bool isFlashlightOn = false; // Estado de la linterna
+    public static bool isFlashlightOn = false; // Estado de la linterna
 
     public float maxEnergy = 100f; // Energía máxima de la linterna
     public float drainRate = 10f; // Tasa de drenaje de energía
@@ -104,6 +104,8 @@ public class FlashlightController : MonoBehaviour
 
             isFlashlightOn = !isFlashlightOn; // Cambiar el estado de la linterna
             flashlight.enabled = isFlashlightOn; // Activar o desactivar la linterna
+
+            Debug.Log("Linterna encendida: " + isFlashlightOn); // Mostrar el estado de la linterna en la consola
 
             audioManager.LinternaClick(); // Reproducir el sonido de la linterna
             UpdateEnergy(); // Actualizar la energía

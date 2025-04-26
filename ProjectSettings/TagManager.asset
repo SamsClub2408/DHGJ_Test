@@ -11,6 +11,8 @@ TagManager:
   - L2
   - Muerte
   - Ancla
+  - MusicaMural
+  - Boss
   layers:
   - Default
   - TransparentFX

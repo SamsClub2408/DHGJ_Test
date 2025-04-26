@@ -10,7 +10,9 @@ public class AudioTrigger : MonoBehaviour
     public AudioSource audioSource2;
     public AudioSource audioSource3;
     public AudioSource audioSource4;
-    public CircleCollider2D activationArea1; // Asigna el collider en el inspector
+    public AudioSource audioSource5;
+    public AudioSource audioSrcCriatura;
+    public CircleCollider2D activationArea1, activationBoss; // Asigna el collider en el inspector
     private bool jugadorHaTocado = false; // Variable para detectar que ha recogido el objeto
 
     public AudioClip objetoRecogidoClip, objetoRecogidoClip1, objetoRecogidoClip2,
@@ -19,6 +21,8 @@ public class AudioTrigger : MonoBehaviour
     public GameObject aleta;
 
     public static bool Atacado = false;
+
+    public GameObject cadaver2; // Asigna el objeto en el inspector
 
     private void Start()
     {
@@ -64,7 +68,23 @@ public class AudioTrigger : MonoBehaviour
         if (Item.objetoRecogido04 && !audioSource3.isPlaying)
         {
             audioSource3.PlayOneShot(objetoRecogidoClip3);
+            cadaver2.SetActive(true); // Activa el objeto
             Item.objetoRecogido04 = false;
+        }
+
+        //Mural
+        if(Item.objetoRecogido05 && !audioSource5.isPlaying)
+        {
+            audioSource5.Play();
+            Item.objetoRecogido05 = false;
+        }
+
+        //Criatura
+        if(Item.objetoRecogido06 && !audioSrcCriatura.isPlaying)
+        {
+            audioSrcCriatura.Play();
+            Item.objetoRecogido06 = false;
+            activationBoss.enabled = true; // Activa el collider del boss
         }
 
         //Inicio de nivel 2
@@ -76,10 +96,10 @@ public class AudioTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D otro)
     {
-        if (otro.CompareTag("Player"))
+        if (otro.CompareTag("MainCamera") && CamaraPOV.Nivel <=1)
         {
             //Activar trigger del animator
-            lampreaAnimator.SetTrigger("LampreaInvocacion");
+            StartCoroutine(AtaqueLamprea());
             Atacado = true;
             StartCoroutine(CambiarEscena()); // Llama a la corrutina para cambiar de escena
         }
@@ -93,5 +113,11 @@ public class AudioTrigger : MonoBehaviour
         SceneManager.LoadScene("Layout"); // Cambia a la escena deseada
         CamaraPOV.Nivel = 2; // Cambia el nivel de la cámara
         Atacado = false; // Reinicia la variable de ataque
+    }
+
+    private IEnumerator AtaqueLamprea()
+    {
+        yield return new WaitForSeconds(1f);
+        lampreaAnimator.SetTrigger("LampreaInvocacion");
     }
 }
