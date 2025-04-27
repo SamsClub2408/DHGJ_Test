@@ -61,13 +61,4 @@ public class NPCGemelo : MonoBehaviour
             }
         }
     }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            dialogoImagen1.SetActive(false);
-            dialogoImagen2.SetActive(false);
-        }
-    }
 }

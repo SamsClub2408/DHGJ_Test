@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.Collections;
 
 public class Inventario : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class Inventario : MonoBehaviour
     public static bool inventarioActivo = false;
 
     public static bool Pausa = false; // Variable para pausar el juego
+    public GameObject FL1;
+    public GameObject FL2;
+    public GameObject FL3;
 
     private void Awake()
     {
@@ -27,6 +31,24 @@ public class Inventario : MonoBehaviour
             if (inventarioActivo)
             {
                 ActualizarInventario();
+            }
+            if (CamaraPOV.Nivel==1)
+            {
+                FL1.SetActive(true);
+                FL2.SetActive(false);
+                FL3.SetActive(false);
+            }
+            if (CamaraPOV.Nivel == 2)
+            {
+                FL1.SetActive(false);
+                FL2.SetActive(true);
+                FL3.SetActive(false);
+            }
+            if (CamaraPOV.Nivel == 3)
+            {
+                FL1.SetActive(false);
+                FL2.SetActive(false);
+                FL3.SetActive(true);
             }
         }
 

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement; // Necesario para cambiar escenas
+using UnityEngine.SceneManagement;
 
 public class CambioDeEscena : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class CambioDeEscena : MonoBehaviour
 
     private bool puedePresionar2 = false; // Estado que bloquea la tecla 2
     public string escenaTecla2; // Nombre de la segunda escena
-    public KeyCode tecla2 = KeyCode.S; // Tecla para la segunda escena
+    public KeyCode tecla2 = KeyCode.Z; // Tecla para la segunda escena
     public Animator FotoAnimator; // Referencia al Animator  
 
     public Animator muerteBarcoAnimator; // ✅ Referencia al Animator de MuerteBarco
@@ -39,7 +39,7 @@ public class CambioDeEscena : MonoBehaviour
 
     IEnumerator EsperarFinAnimacion1()
     {
-        yield return new WaitForSeconds(instruccionesAnimator.GetCurrentAnimatorStateInfo(0).length); // Espera la duración de la animación `Fade`
+        yield return new WaitForSeconds(instruccionesAnimator.GetCurrentAnimatorStateInfo(0).length);
         puedePresionar1 = true; // Ahora se puede presionar  
     }
 
@@ -58,6 +58,12 @@ public class CambioDeEscena : MonoBehaviour
         }
 
         Debug.Log("Muerte ahora es TRUE, esperando a que la animación 'MuerteBarco' comience...");
+
+        // ✅ Asegurar que el objeto está activo antes de verificar la animación
+        if (!muerteBarcoAnimator.gameObject.activeSelf)
+        {
+            muerteBarcoAnimator.gameObject.SetActive(true);
+        }
 
         // ✅ Esperar hasta que la animación realmente se inicie
         while (!muerteBarcoAnimator.GetCurrentAnimatorStateInfo(0).IsName(nombreAnimacionMuerte))

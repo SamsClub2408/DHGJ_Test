@@ -216,14 +216,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419500391}
-  m_LocalRotation: {x: -0.0027404518, y: -0, z: -0, w: 0.99999624}
+  m_LocalRotation: {x: 0, y: 0.99999624, z: 0.0027400774, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 1.7399111}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 810028216}
   m_Father: {fileID: 789027610}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.314, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 682, y: -373.94028}
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 44b97a1a25c4b864ca8d7502121df235, type: 3}
+  m_Texture: {fileID: 2800000, guid: ca82670a809d5bf4ca35f47e39667ffd, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -298,7 +298,7 @@ MonoBehaviour:
   tecla1: 109
   instruccionesAnimator: {fileID: 1450877619}
   escenaTecla2: Layout
-  tecla2: 115
+  tecla2: 122
   FotoAnimator: {fileID: 1142670507}
   muerteBarcoAnimator: {fileID: 789027611}
   nombreAnimacionMuerte: MuerteBarco
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469794450}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 831e556cfc900d840bdca379896c470a, type: 3}
   m_Name: 
@@ -853,14 +853,14 @@ RectTransform:
   m_GameObject: {fileID: 810028215}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1.08, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 419500392}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2650, y: 6}
+  m_AnchoredPosition: {x: 2692, y: 6}
   m_SizeDelta: {x: 1223, y: 917.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &810028217
@@ -883,7 +883,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 44b97a1a25c4b864ca8d7502121df235, type: 3}
+  m_Texture: {fileID: 2800000, guid: ca82670a809d5bf4ca35f47e39667ffd, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1115,7 +1115,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'E para abrir tu inventario
 
-    S para ir al mar'
+    Z para ir al mar'
 --- !u!222 &1024643557
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1236,7 +1236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1142670506
 Transform:
   m_ObjectHideFlags: 0

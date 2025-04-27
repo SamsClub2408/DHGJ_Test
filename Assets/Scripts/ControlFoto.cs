@@ -18,7 +18,7 @@ public class ControlFoto : MonoBehaviour
 
     IEnumerator EsperarFinAnimacion()
     {
-        yield return new WaitForSeconds(instruccionesAnimator.GetCurrentAnimatorStateInfo(0).length); // Espera la duración de la animación `Fade`
+        yield return new WaitForSeconds(15f); // Espera la duración de la animación `Fade`
         puedePresionarE = true; // Ahora se puede presionar E
     }
 
