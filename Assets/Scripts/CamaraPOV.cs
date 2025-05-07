@@ -14,6 +14,7 @@ public class CamaraPOV : MonoBehaviour
     public float darknessLimitY;
 
     public static int Nivel = 1;
+    public Transform PosicionNivel1;
     public Transform PosicionNivel2;
     public Transform PosicionNivel3;
 
@@ -34,13 +35,14 @@ public class CamaraPOV : MonoBehaviour
     public EdgeCollider2D colliderNv1;
     public CircleCollider2D Mural1;
 
-    public string etiquetaNivel1 = "L1"; 
+    public string etiquetaNivel1 = "L1";
     public string etiquetaNivel2 = "L2";
 
     private void Start()
     {
-        if(Nivel == 1)
+        if (Nivel == 1)
         {
+            transform.position = PosicionNivel1.position; // Cambia la posición de la cámara al inicio del nivel 1
             manoDerecha1.enabled = true; // Activa la mano derecha del nivel 1
             manoIzquierda1.enabled = true; // Activa la mano izquierda del nivel 1
             colliderNv1.enabled = true; // Activa el collider del nivel 1
@@ -82,7 +84,7 @@ public class CamaraPOV : MonoBehaviour
 
         transform.position = newPosition;
         AjustarIntensidad();
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M) && Inventario.inventarioActivo == false)
         {
             SceneManager.LoadScene("Menu");
         }

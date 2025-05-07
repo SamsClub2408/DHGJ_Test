@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DHGJ_Arte_Fondo_Capa5_01_0: 2733316500010882448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

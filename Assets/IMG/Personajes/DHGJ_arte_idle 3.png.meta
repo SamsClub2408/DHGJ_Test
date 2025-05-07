@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DHGJ_arte_idle 3_0: 6453123904019595034
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

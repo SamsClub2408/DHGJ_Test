@@ -410,7 +410,18 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DHGJ_Arte_Fondo_Capa4_01_0: -2978785420782790849
+      DHGJ_Arte_Fondo_Capa4_01_1: 5599772535378019927
+      DHGJ_Arte_Fondo_Capa4_01_10: -5391334540403582577
+      DHGJ_Arte_Fondo_Capa4_01_2: 9011291512455743587
+      DHGJ_Arte_Fondo_Capa4_01_3: -6742762792682030572
+      DHGJ_Arte_Fondo_Capa4_01_4: 3196817534040007349
+      DHGJ_Arte_Fondo_Capa4_01_5: -6960802027135581165
+      DHGJ_Arte_Fondo_Capa4_01_6: -4186943436606037675
+      DHGJ_Arte_Fondo_Capa4_01_7: 5832521663378758553
+      DHGJ_Arte_Fondo_Capa4_01_8: -8188417511061374003
+      DHGJ_Arte_Fondo_Capa4_01_9: 6943392407445261950
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

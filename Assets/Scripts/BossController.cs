@@ -51,6 +51,8 @@ public class BossController : MonoBehaviour
 
         Debug.Log("Animación finalizada. Activando objeto oculto...");
         objetoActivar.SetActive(true); // ✅ Mostrar objeto oculto
+        ActivaMuerte.muerte = false;
+        CamaraPOV.Nivel = 1;
 
         yield return new WaitForSeconds(6f);
         Debug.Log("Cambiando a escena: " + escenaFinal);

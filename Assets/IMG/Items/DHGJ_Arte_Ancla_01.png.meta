@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DHGJ_Arte_Ancla_01_0: 3205804002057465513
+      DHGJ_Arte_Ancla_01_1: 1570716972958141995
+      DHGJ_Arte_Ancla_01_2: 7693342373025879342
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

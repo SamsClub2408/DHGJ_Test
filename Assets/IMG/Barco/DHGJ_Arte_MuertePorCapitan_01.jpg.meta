@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DHGJ_Arte_MuertePorCapitan_01_0: -6949240228694780546
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

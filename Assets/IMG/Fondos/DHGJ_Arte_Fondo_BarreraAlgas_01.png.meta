@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DHGJ_Arte_Fondo_BarreraAlgas_01_0: 7431912777501692281
+      DHGJ_Arte_Fondo_BarreraAlgas_01_1: -5955329383805765671
+      DHGJ_Arte_Fondo_BarreraAlgas_01_2: -8269818924669333049
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
