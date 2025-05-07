@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class CamaraPOV : MonoBehaviour
 {
@@ -81,6 +82,10 @@ public class CamaraPOV : MonoBehaviour
 
         transform.position = newPosition;
         AjustarIntensidad();
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     void AjustarIntensidad()

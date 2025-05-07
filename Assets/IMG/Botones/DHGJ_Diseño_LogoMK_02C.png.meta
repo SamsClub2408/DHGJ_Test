@@ -1,0 +1,493 @@
+fileFormatVersion: 2
+guid: e5eaf877e543a5c4387820d6a76a13e0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6871840983544284549
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_0"
+  - first:
+      213: 6552655515669456831
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_1"
+  - first:
+      213: 3003380860696572240
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_2"
+  - first:
+      213: 7494969031464831022
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_3"
+  - first:
+      213: 287968899821803300
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_4"
+  - first:
+      213: -5731883203631177338
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_5"
+  - first:
+      213: 8428706422341273302
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_6"
+  - first:
+      213: -4875587996987231200
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_7"
+  - first:
+      213: -4273212255114195867
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_8"
+  - first:
+      213: 3468119786114270454
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_9"
+  - first:
+      213: 6486451111638847887
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_10"
+  - first:
+      213: -7798872453157929288
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_11"
+  - first:
+      213: 7559046412767505800
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_12"
+  - first:
+      213: 3372633735268651597
+    second: "DHGJ_Dise\xF1o_LogoMK_02C_13"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_0"
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 969
+        width: 1033
+        height: 974
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 585c02947fead5f50800000000000000
+      internalID: 6871840983544284549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_1"
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 789
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb76bfa5975bfea50800000000000000
+      internalID: 6552655515669456831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_2"
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 551
+        width: 395
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051b60feaf62ea920800000000000000
+      internalID: 3003380860696572240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_3"
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 551
+        width: 382
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e28c303cf9a730860800000000000000
+      internalID: 7494969031464831022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_4"
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 551
+        width: 650
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4271d3c40321ff300800000000000000
+      internalID: 287968899821803300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_5"
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 551
+        width: 328
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 681298958924470b0800000000000000
+      internalID: -5731883203631177338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_6"
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 605
+        width: 71
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d684bb75d7c8f470800000000000000
+      internalID: 8428706422341273302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_7"
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 438
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024fa687c8e665cb0800000000000000
+      internalID: -4875587996987231200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_8"
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 256
+        width: 163
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c821c281082b4c0800000000000000
+      internalID: -4273212255114195867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_9"
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 256
+        width: 180
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f448d1129c312030800000000000000
+      internalID: 3468119786114270454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_10"
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 256
+        width: 352
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f81db2a5be0840a50800000000000000
+      internalID: 6486451111638847887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_11"
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 396
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be31f4f2d6d4c390800000000000000
+      internalID: -7798872453157929288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_12"
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 337
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88da2b1b9a027e860800000000000000
+      internalID: 7559046412767505800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "DHGJ_Dise\xF1o_LogoMK_02C_13"
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 335
+        width: 40
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d42df2463800ece20800000000000000
+      internalID: 3372633735268651597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
