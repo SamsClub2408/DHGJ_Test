@@ -13,11 +13,13 @@ public class NPCGemelo : MonoBehaviour
         dialogoImagen1.SetActive(false);
         dialogoImagen2.SetActive(false);
         objetoCaliz.SetActive(false);
+        gemeloAnimator.enabled = true;
 
         gemeloAnimator.SetInteger("Estado", 0);
 
         if (CamaraPOV.Nivel == 2)
         {
+            gemeloAnimator.enabled = true;
             StartCoroutine(FlujoAnimaciones()); // ✅ Solo inicia la animación si estamos en el nivel 2
         }
     }
@@ -32,7 +34,7 @@ public class NPCGemelo : MonoBehaviour
 
         yield return new WaitForSeconds(4f);
         CambiarEstado(3);
-        objetoCad1.SetActive(false );
+        objetoCad1.SetActive(false);
         yield return new WaitForSeconds(5.5f);
         objetoCaliz.SetActive(true);
     }
@@ -59,6 +61,14 @@ public class NPCGemelo : MonoBehaviour
                 dialogoImagen1.SetActive(false);
                 dialogoImagen2.SetActive(true);
             }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            dialogoImagen1.SetActive(false);
+            dialogoImagen2.SetActive(false);
         }
     }
 }

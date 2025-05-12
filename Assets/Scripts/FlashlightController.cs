@@ -11,7 +11,7 @@ public class FlashlightController : MonoBehaviour
     public static bool isFlashlightOn = false; // Estado de la linterna
 
     public float maxEnergy = 100f; // Energía máxima de la linterna
-    public float drainRate = 1f; // Tasa de drenaje de energía
+    public float drainRate = 4f; // Tasa de drenaje de energía
     private float currentEnergy; // Energía actual de la linterna
     public Slider energySlider; // Referencia al slider de energía
 

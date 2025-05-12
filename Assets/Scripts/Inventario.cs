@@ -55,8 +55,8 @@ public class Inventario : MonoBehaviour
         if(inventarioActivo)
         {
             //Pausa el juego si el inventario está activo
-            Time.timeScale = 0f;
-            Pausa = true; // Cambia el estado de pausa
+            //Time.timeScale = 0f;
+            //Pausa = true; // Cambia el estado de pausa
         }
         else
         {
