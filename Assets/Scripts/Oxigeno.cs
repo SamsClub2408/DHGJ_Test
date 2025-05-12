@@ -10,7 +10,7 @@ public class Oxigeno : MonoBehaviour
     // Configuración de oxígeno
     public float oxigenoMaximo = 100f;
     public static float oxigenoActual;
-    public static float consumoBase = 1f; // Consumo por segundo
+    public static float consumoBase = 5f; // Consumo por segundo
     public static float multiplicadorConsumo = 2f; // Aumento por umbral
 
     // Umbrales en Y (de mayor a menor profundidad)

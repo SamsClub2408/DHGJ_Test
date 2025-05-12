@@ -9,7 +9,7 @@ public class OxygenController : MonoBehaviour
     {
         if (collision.CompareTag("AreaOxigeno"))
         {
-            Oxigeno.consumoBase = -2f;
+            Oxigeno.consumoBase = -10f;
             Oxigeno.multiplicadorConsumo = 0f; // Detener el consumo de oxígeno
             areaOxigeno = true; // Activar el área de oxígeno
             textoRecarga.enabled = true; // Mostrar el texto de recarga
